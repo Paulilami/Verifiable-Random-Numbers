@@ -5,7 +5,7 @@ import abi from '/VerifiableRandomNumberGeneratorABI.json';
 const web3 = new Web3(window.ethereum);
 
 const VerifiableRandomNumberGenerator = () => {
-  const [contractAddress, setContractAddress] = useState('0x...'); // Replace with your contract address
+  const [contractAddress, setContractAddress] = useState(''); 
   const [walletAddress, setWalletAddress] = useState('');
   const [seed, setSeed] = useState('');
   const [nonce, setNonce] = useState('');
@@ -30,7 +30,7 @@ const VerifiableRandomNumberGenerator = () => {
 
   const handleCommitRandomNumber = async () => {
     const contract = new web3.eth.Contract(abi, contractAddress);
-    const method = 'UserProvidedSeed'; // Replace with your preferred seed generation method
+    const method = '-SECRET-'; //blurred
     const txCount = await web3.eth.getTransactionCount(walletAddress);
     const tx = {
       from: walletAddress,
