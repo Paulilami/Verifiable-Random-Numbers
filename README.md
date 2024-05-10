@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Verifiable Random Number Generator (VRNG) protocol is a secure and decentralized solution for generating random numbers on the Ethereum blockchain. It enables developers to obtain verifiable random numbers for various applications, including gaming, gambling, and decentralized finance (DeFi), while ensuring transparency, fairness, and resistance to manipulation.
+The Verifiable Random Number Generator is an idea for a secure and decentralized solution for generating random numbers on the Ethereum blockchain. It enables developers to obtain verifiable random numbers for various applications, including gaming, gambling, and decentralized finance (DeFi), while ensuring transparency, fairness, and resistance to manipulation.
 
 ## Features
 
