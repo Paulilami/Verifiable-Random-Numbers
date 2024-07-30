@@ -83,16 +83,15 @@ contract VerifiableRandomNumberGenerator is Ownable {
     }
 
     function verifyAsset(address assetAddress) internal view returns (bool) {
-        // Add your asset verification logic here
+      //placeholder
     }
-		// Define a function to generate the seed based on the chosen method
+
     function generateSeed(address address1, address address2, SeedGenerationMethod method, uint256 userProvidedSeed) internal view returns (uint256) {
         if (method == SeedGenerationMethod.UserProvidedSeed) {
             return userProvidedSeed;
         } else if (method == SeedGenerationMethod.SystemEntropy) {
             return uint256(keccak256(abi.encodePacked(block.timestamp, block.difficulty)));
         } else if (method == SeedGenerationMethod.CombinedSeed) {
-            // Generate a seed using both the user-provided seed and system entropy
             return uint256(keccak256(abi.encodePacked(address1, address2, block.timestamp, block.difficulty, userProvidedSeed)));
         } else {
             revert("Invalid seed generation method");
